@@ -34,6 +34,6 @@
 		<input type="hidden" name="id" value="<?php if(isset($modified)) echo $modified[0]->id; ?>" />
 		<?php if(isset($modified)) echo  '<a href="'.base_url().'index.php/dialecto"> Cancelar </a>'?>
 	</form>
-	<br/><a href="<?php echo base_url().'index.php/Mainctr'; ?>"> Menú Pricipal </a>
+
 </body>
 </html>
