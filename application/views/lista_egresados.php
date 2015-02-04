@@ -27,6 +27,9 @@ Egresados Existentes en la base de Datos: <?php echo $numFilas; ?>
         <td>CORREO</td>
         <td>EDITAR</td>
         <td>ELIMINAR</td>
+        <td>IDIOMAS</td>
+        <td>DIALECTOS</td>
+
 
     </tr>
     <?php
@@ -41,6 +44,8 @@ Egresados Existentes en la base de Datos: <?php echo $numFilas; ?>
                 echo "<td>".$egresado->correo."</td>";
                 echo "<td><a href=".base_url()."index.php/Egresadoctr/view_update/".$egresado->id.">EDITAR</a></td>";
                 echo "<td><a href=".base_url()."index.php/Egresadoctr/delete/".$egresado->id.">ELIMINAR</a></td>";;
+                echo "<td><a href=".base_url()."index.php/Eidioma/view_idiomas/".$egresado->id.">EDITAR</a></td>";
+                echo "<td><a href=".base_url()."index.php/Edialecto/view_dialectos/".$egresado->id.">EDITAR</a></td>";;
             echo "</tr>";
         }
     ?>
