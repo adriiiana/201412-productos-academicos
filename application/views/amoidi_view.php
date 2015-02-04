@@ -16,21 +16,21 @@
 		</tr>
 		<?php 
 			
-			foreach ($items1 as $key ) {
+			foreach ($items as $key ) {
 				echo '<tr> <td>'.$key->nombre.'</td>';
-				echo '<td> <a href="e_idioma/eliminar/'.$key->id.'"> Eliminar </a> </td>';
+				echo '<td> <a href="'.base_url().'index.php/e_idioma/eliminar/'.$key->id.'"> Eliminar </a> </td>';
 				echo '<td> <a href="'.base_url().'index.php/e_idioma/actualizar/'.$key->id.'"> Modificar </a> </td> </tr>';
 			}
 
-			foreach ($items2 as $key ) {
-				echo '<tr> <td>'.$key->nombres.'</td>';
-				echo '<td> <a href="e_idioma/eliminar/'.$key->id.'"> Eliminar </a> </td>';
-				echo '<td> <a href="'.base_url().'index.php/e_idioma/actualizar/'.$key->id.'"> Modificar </a> </td> </tr>';
-			}
+			// foreach ($items2 as $key ) {
+			// 	echo '<tr> <td>'.$key->nombres.'</td>';
+			// 	echo '<td> <a href="'.base_url().'index.php/e_idioma/eliminar/'.$key->id.'"> Eliminar </a> </td>';
+			// 	echo '<td> <a href="'.base_url().'index.php/e_idioma/actualizar/'.$key->id.'"> Modificar </a> </td> </tr>';
+			// }
 		?>
 	</table>
 
-	<form action="<?php echo base_url() ?>index.php/e_idioma/<?php if(isset($modified)) echo 'actualizar'; else echo 'agregar'; ?>" method="POST">
+	<form action="<?php echo base_url() ?>index.php/e_idioma/<?php if(isset($modified)) echo 'actualizar/'.$modified[0]->id; else echo 'agregar'; ?>" method="POST">
 		<br/><label> Idioma: </label>
 		<input type="text" name="nombre" value="<?php if(isset($modified)) echo $modified[0]->nombre ?>" autofocus/> <br/>
 		<input type="submit" value="<?php if(isset( $modified )) echo 'Modificar'; else echo 'Agregar'; ?>" />

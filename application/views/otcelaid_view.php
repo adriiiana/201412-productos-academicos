@@ -19,13 +19,13 @@
 			foreach ($items as $key ) {
 				echo '<tr> <td>'.$key->nombre.'</td>';
 				echo '<td>'.$key->descripcion.'</td>';
-				echo '<td> <a href="dialecto/eliminar/'.$key->id.'"> Eliminar </a> </td>';
-				echo '<td> <a href="'.base_url().'index.php/dialecto/actualizar/'.$key->id.'"> Modificar </a> </td> </tr>';
+				echo '<td> <a href="'.base_url().'index.php/e_dialecto/eliminar/'.$key->id.'"> Eliminar </a> </td>';
+				echo '<td> <a href="'.base_url().'index.php/e_dialecto/actualizar/'.$key->id.'"> Modificar </a> </td> </tr>';
 			}
 		?>
 	</table>
 
-	<form action="<?php echo base_url() ?>index.php/dialecto/<?php if(isset($modified)) echo 'actualizar'; else echo 'agregar'; ?>" method="POST">
+	<form action="<?php echo base_url() ?>index.php/e_dialecto/<?php if(isset($modified)) echo 'actualizar/'.$modified[0]->id; else echo 'agregar'; ?>" method="POST">
 		<br/><label> Nombre del Dialecto: </label>
 		<input type="text" name="nombre" value="<?php if(isset($modified)) echo $modified[0]->nombre ?>" autofocus/> <br/>
 		<label> Descripción: </label>

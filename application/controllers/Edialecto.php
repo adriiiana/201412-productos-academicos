@@ -13,13 +13,13 @@ class Edialecto extends CI_Controller {
 
                 $data['items'] = $this->edialecto_model->get_all();
                 $data['Titulo'] = "Dialectos";
-                $this->load->view('dialecto_view', $data);
+                $this->load->view('otcelaid_view', $data);
         }
 
         public function eliminar( $id ) {
 
                 $this->edialecto_model->erase($id);
-                redirect('dialecto' );
+                redirect('e_dialecto' );
         }
 
         public function actualizar( $id = NULL ) {
@@ -29,12 +29,12 @@ class Edialecto extends CI_Controller {
                 if( $data != NULL ) {
                         $id = $data['id'];
                         $this->edialecto_model->update( $id, $data );
-                        redirect('dialecto' );
+                        redirect('e_dialecto' );
                 }
                 $data['Titulo'] = "Dialectos";
                 $data['items'] = $this->edialecto_model->get_all();
                 $data['modified'] = $this->edialecto_model->get_by_id( $id );
-                $this->load->view('dialecto_view', $data);           
+                $this->load->view('otcelaid_view', $data);           
                 
         }
 
@@ -42,6 +42,6 @@ class Edialecto extends CI_Controller {
 
                 $data = $this->input->post();
                 $this->edialecto_model->add( $data );
-                redirect('dialecto' );
+                redirect('e_dialecto' );
         }
 }

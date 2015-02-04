@@ -11,16 +11,15 @@ class Eidioma extends CI_Controller {
 
         public function index() {
 
-                $data['items1'] = $this->eidioma_model->get_all();
-                $data['items2'] = $this->eidioma_model->get_all_egresados();
+                $data['items'] = $this->eidioma_model->get_all();
                 $data['Titulo'] = "Idiomas";
-                $this->load->view('idioma_view', $data);
+                $this->load->view('amoidi_view', $data);
         }
 
         public function eliminar( $id ) {
 
                 $this->eidioma_model->delete($id);
-                redirect('idioma' );
+                redirect('e_idioma' );
         }
 
         public function actualizar( $id = NULL ) {
@@ -30,19 +29,18 @@ class Eidioma extends CI_Controller {
                 if( $data != NULL ) {
                         $id = $data['id'];
                         $this->eidioma_model->update( $id, $data );
-                        redirect('idioma' );
+                        redirect('e_idioma' );
                 }
                 $data['Titulo'] = "Idiomas";
                 $data['items'] = $this->eidioma_model->get_all();
                 $data['modified'] = $this->eidioma_model->get_by_id( $id );
-                $this->load->view('idioma_view', $data);           
-                
+                $this->load->view('amoidi_view', $data);
         }
 
         public function agregar() {
 
                 $data = $this->input->post();
                 $this->eidioma_model->add( $data );
-                redirect('e_ idioma' );
+                redirect('e_idioma' );
         }
 }

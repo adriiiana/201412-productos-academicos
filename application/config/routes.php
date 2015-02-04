@@ -56,7 +56,7 @@ $route['e_dialecto/actualizar/(:num)'] = 'edialecto/actualizar/$1';
 $route['e_dialecto/agregar'] = 'edialecto/agregar';
 
 $route['e_idioma'] = 'eidioma';
-$route['e-idioma/eliminar/(:num)'] = 'eidioma/eliminar/$1';
+$route['e_idioma/eliminar/(:num)'] = 'eidioma/eliminar/$1';
 $route['e_idioma/actualizar/(:num)'] = 'eidioma/actualizar/$1';
 $route['e_idioma/agregar'] = 'eidioma/agregar';
 
