@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding:0;
+}
+
+html, body{
+    /*height: 100%;*/
+    padding: 0;
+    margin: 0;
+    background:url('http://localhost/SisEgresa/images/body.jpg');
+    
+    background-repeat: repeat;
+    color:#fff;
+    letter-spacing: 1px;
+    text-align: center;
+    font-family:Georgia, "Times New Roman", Times, serif;
+    position: relative;
+}
+
+.tableIdioma caption{
+    font-size: 190px;
+    font-weight: normal;
+    padding-top: 20px;
+    height: 90px;
+}
+
+#contenedor{
+    padding-top: 190px;
+    width: 960px;
+    margin: 0 auto;
+}
+
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    -webkit-box-shadow: 0px 2px 1px 5px rgba(242,242,242,0);
+    box-shadow: 0px 2px 1px 5px rgba(242,242,242,0.1);
+}
+
+.tableIdioma{
+    border: 1px solid #555;
+}
+
+#contenedor .action-button{
+    width: 100px;
+    background: #828282;
+    font-weight: bold;
+    color:white;
+    border:0 none;
+    border-radius: 1px;
+    cursor:pointer;
+    padding: 10px 5px;
+    margin:10px 5px;
+}
+
+#contenedor .action-button:hover, #inicio .action-button:focus{
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+
+
+
+
+.tablaIdioma td{
+    border-left: 1px solid #555;
+    border-top: 1px solid #555;
+    padding: 10px;
+    text-align: left;
+}
+
+.tablaIdioma th, .tablaIdioma th:hover{
+    border-left: 1px solid #555;
+    border-bottom: 1px solid #828282;
+    padding: 20px;
+    background-color:#151515 !important;
+    color:#fff !important;
+    font-weight: normal;
+}
+
+.tablaIdioma, .filas{
+    background: #404040;
+    color: #fff;
+}
+
+.tablaIdioma, .filas:hover *{
+    background: #eeeeee;
+    color: #000;
+}
+
+.filas:nth-child(2n+1){
+    background-color: #000000;
+    color:white;
+}
