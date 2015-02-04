@@ -10,5 +10,6 @@
        <a href= <?php echo base_url()."index.php/Event" ?> >Eventos</a><br>
       <a href= <?php echo base_url()."index.php/empresas" ?> >Empresas</a><br>
        <a href= <?php echo base_url()."index.php/Advice" ?> >Consejos</a>
+	<a href= <?php echo base_url()."index.php/main_controller" ?> >Consejos</a>
 </body>
 </html>
